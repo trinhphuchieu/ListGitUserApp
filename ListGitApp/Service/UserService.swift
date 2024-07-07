@@ -34,7 +34,7 @@ struct UserService: UserServiceProtocol {
         
         do {
             var request = URLRequest(url: url)
-            request.setValue("Bearer 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", forHTTPHeaderField: "Authorization")
+            request.setValue("Bearer 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", forHTTPHeaderField: "Authorization")
             let (data, _) = try await URLSession.shared.data(for: request)
             return try JsonUtilities.decodeJSON(type: type, from: data)
         } catch {
